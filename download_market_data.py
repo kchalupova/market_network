@@ -1,3 +1,7 @@
+"""
+Downlaods the latest (1 month) market data (open, volume, close, low, high) on all current tickers 
+All curent tickerrs from NASDAQ, NYSE MKT, NYSE, NYSE ARCA< BATS AND IEXG exhanges are used. 
+"""
 #!/usr/bin/env python
 
 from pathlib import Path

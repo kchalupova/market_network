@@ -1,7 +1,8 @@
 data/
 .vscode/ 
 experiments.ipynb
-
+# secret connection to reddit
+reddit_connection.json 
 # the rest is default python 
 
 # Byte-compiled / optimized / DLL files
