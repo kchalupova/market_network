@@ -10,6 +10,8 @@ import datetime as dt  # imports datetime to deal with dates
 import attr
 import json
 
+
+# List of investing subreddits obtained from https://thehiveindex.com/topics/investing/platform/reddit/
 SUBREDDITS = [
     "investing",
     "stocks",
@@ -44,6 +46,10 @@ SUBREDDITS = [
 
 @attr.s
 class Connection:
+    """
+    Connection to your own reddit API
+    """
+
     client_id: str = attr.ib()
     client_secret: str = attr.ib()
     user_agent: str = attr.ib()
@@ -53,8 +59,10 @@ class Connection:
 
 def get_connection():
     """
-    To run this, you need to have reddit account and set up the api connection here https://www.reddit.com/prefs/apps
-    do it like so https://medium.com/social-media-theories-ethics-and-analytics/automating-data-collection-from-reddit-to-invest-in-stocks-2c86fe365db9
+    To download using reddit API, you need
+    - a reddit account
+    - to set up the api connection from your account here https://www.reddit.com/prefs/apps
+    Follow the guide here to obtain your own connection https://medium.com/social-media-theories-ethics-and-analytics/automating-data-collection-from-reddit-to-invest-in-stocks-2c86fe365db9
 
     you need to save the dictionary with the connection keys as "reddit_connection.json"
     """
