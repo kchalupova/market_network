@@ -1,3 +1,9 @@
+data/
+.vscode/ 
+experiments.ipynb
+
+# the rest is default python 
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
