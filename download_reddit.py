@@ -100,6 +100,7 @@ def get_reddit(connection: Connection):
 
     # Loop through all investment related subreddits
     for subreddit_name in SUBREDDITS:
+        print(f"Downloading data from subreddit {subreddit_name}")
         try:
             subreddit = reddit.subreddit(subreddit_name)
             # Pull latest posts within each flair sorted from newest to oldest
@@ -117,7 +118,7 @@ def get_reddit(connection: Connection):
                 DD_dict["body"].append(posts.selftext)
                 DD_dict["subreddit"].append(subreddit_name)
         except:
-            print(f"failed in subreddit {subreddit_name}")
+            print(f"failed in subreddit `{subreddit_name}`")
     # First convert dictionary to DataFrame
     DD_data = pd.DataFrame(
         DD_dict
